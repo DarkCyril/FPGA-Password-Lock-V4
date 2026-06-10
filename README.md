@@ -177,5 +177,33 @@ FPGA-Password-Lock-V4/
 
 ---
 
+## Known Limitations
+
+- Password storage is volatile and resets on power cycle.
+- Current implementation uses DIP switches rather than a keypad.
+- PWM hold duty cycle was experimentally tuned for the current solenoid model.
+
+## Highlights
+- Refactored FSM from 9 states to 6 states.
+- Implemented escalating lockout protection.
+- Designed FPGA-controlled MOSFET solenoid driver.
+- Developed PWM hold mode reducing steady-state duty cycle from 100% to approximately 40%.
+- Verified operation through hardware testing and iterative tuning.
+
+## FPGA Resource Utilization
+
+Target Device: Intel MAX 10 (10M50DAF484C7G)
+
+| Resource | Usage |
+|-----------|--------|
+| Logic Elements | 250 / 49,760 (<1%) |
+| Registers | 112 |
+| I/O Pins | 67 / 360 (19%) |
+| Memory Bits | 0 |
+| PLLs | 0 |
+| ADC Blocks | 0 |
+
+The design occupies less than 1% of the available FPGA logic resources, leaving significant room for future expansion such as keypad interfaces, non-volatile password storage, display controllers, and communication peripherals.
+
 ## Demo
 
