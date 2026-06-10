@@ -211,5 +211,26 @@ Target Device: Intel MAX 10 (10M50DAF484C7G)
 
 The design occupies less than 1% of the available FPGA logic resources, leaving significant room for future expansion such as keypad interfaces, non-volatile password storage, display controllers, and communication peripherals.
 
+## RTL Architecture
+
+The design is organized into independent modules responsible for:
+- Password verification and state control (`password_fsm`)
+- Variable lockout timing (`count_down`)
+- Push-button debouncing (`debounce`)
+- Solenoid PWM power management (`powersaving_mode`)
+- Seven-segment display control (`hexdisplay`)
+
+![RTL Architecture](docs/rtl_architecture.png)
+
+Password FSM
+     │
+ ┌───┼──────────┐
+ │   │          │
+ ▼   ▼          ▼
+Timer PWM    Display
+ │    │
+ ▼    ▼
+Lock Solenoid
+
 ## Demo
 
