@@ -220,7 +220,7 @@ The design is organized into independent modules responsible for:
 - Solenoid PWM power management (`powersaving_mode`)
 - Seven-segment display control (`hexdisplay`)
 
-![RTL Architecture]([docs/rtl_architecture.png](https://github.com/DarkCyril/FPGA-Password-Lock-V4/blob/main/doc/rtl_architecture.png))
+![RTL Architecture](https://github.com/DarkCyril/FPGA-Password-Lock-V4/blob/main/doc/rtl_architecture.png)
 
 
 ## Demo
