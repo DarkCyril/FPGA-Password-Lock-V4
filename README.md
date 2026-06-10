@@ -14,3 +14,13 @@ Power-saving hold mode
 Hardware debouncing for push-button inputs
 Seven-segment display integration
 RTL simulation and hardware validation
+
+#Hardware Used
+#FPGA
+Intel MAX 10 FPGA (DE10-Lite)
+#Driver Circuit
+N-Channel MOSFET
+Flyback diode protection
+External 12V power supply
+#Actuator
+12V Solenoid Lock
