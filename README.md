@@ -222,6 +222,32 @@ The design is organized into independent modules responsible for:
 
 ![RTL Architecture](https://github.com/DarkCyril/FPGA-Password-Lock-V4/blob/main/doc/rtl_architecture.png)
 
+## FSM Diagram
+
+```mermaid
+stateDiagram-v2
+    [*] --> S_IDLE
+
+    S_IDLE --> S_SET: mode && enter
+    S_IDLE --> S_INPUT: !mode && enter
+    S_IDLE --> S_IDLE: otherwise
+
+    S_SET --> S_IDLE: enter
+    S_SET --> S_SET: !enter
+
+    S_INPUT --> S_CHK: enter
+    S_INPUT --> S_INPUT: !enter
+
+    S_CHK --> S_UNBLK: saved_pin == enter_pin
+    S_CHK --> S_BLK: saved_pin != enter_pin
+
+    S_BLK --> S_IDLE: ticks
+    S_BLK --> S_BLK: !ticks
+
+    S_UNBLK --> S_IDLE: enter || ticks
+    S_UNBLK --> S_UNBLK: otherwise
+```
+
 
 ## Demo
 
