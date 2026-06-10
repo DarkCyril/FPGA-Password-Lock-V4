@@ -179,12 +179,3 @@ FPGA-Password-Lock-V4/
 
 ## Demo
 
-*Add project photos, oscilloscope captures, and a demonstration video here.*
-
-Example:
-
-* FSM state transitions
-* Solenoid lock actuation
-* PWM waveform
-* Hardware setup
-* Power-saving mode demonstration
