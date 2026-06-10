@@ -177,6 +177,12 @@ FPGA-Password-Lock-V4/
 
 ---
 
+## Previous Versions
+
+- [FPGA Password Lock V1](https://github.com/DarkCyril/FPGA-Password-Lock-V1)
+- [FPGA Password Lock V2](https://github.com/DarkCyril/FPGA-Password-Lock-V2)
+- [FPGA Password Lock V3](https://github.com/DarkCyril/FPGA-Password-Lock-V3)
+
 ## Known Limitations
 
 - Password storage is volatile and resets on power cycle.
